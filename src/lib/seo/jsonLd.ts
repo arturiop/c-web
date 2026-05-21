@@ -75,3 +75,40 @@ export const buildSoftwareApplicationJsonLd = (props: {
   applicationCategory: props.applicationCategory,
   operatingSystem: props.operatingSystem ?? 'Web',
 });
+
+export const buildArticleJsonLd = (props: {
+  headline: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified: string;
+  authorName: string;
+  publisherName: string;
+  publisherLogoUrl: string;
+  image?: string;
+}): JsonLdValue => ({
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: props.headline,
+  description: props.description,
+  ...(props.image ? { image: props.image } : {}),
+  datePublished: props.datePublished,
+  dateModified: props.dateModified,
+  author: {
+    '@type': 'Organization',
+    name: props.authorName,
+    url: props.url.replace(/\/blog\/[^/]+$/u, ''),
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: props.publisherName,
+    logo: {
+      '@type': 'ImageObject',
+      url: props.publisherLogoUrl,
+    },
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': props.url,
+  },
+});

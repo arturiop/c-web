@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { useCases, getUseCaseBySlug } from '@/data/useCases';
-import { getBreadcrumbsForPath } from '@/lib/routes';
 import { createPageMetadata } from '@/lib/seo/metadata';
 
 type UseCaseDetailPageProps = {
@@ -24,6 +23,7 @@ export async function generateMetadata(props: UseCaseDetailPageProps) {
     title: item.metaTitle,
     description: item.metaDescription,
     path: `/use-cases/${item.slug}`,
+    noIndex: true,
   });
 }
 
@@ -39,7 +39,13 @@ export default async function UseCaseDetailPage(props: UseCaseDetailPageProps) {
 
   return (
     <div className="grid gap-6">
-      <Breadcrumbs items={getBreadcrumbsForPath(path)} />
+      <Breadcrumbs
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Use cases', href: '/use-cases' },
+          { label: item.title, href: path },
+        ]}
+      />
 
       <section className="rounded-[2rem] border border-[var(--color-watchable-line)] bg-white/80 p-8 shadow-sm">
         <p className="text-sm font-semibold tracking-[0.22em] text-[var(--color-watchable-accent)] uppercase">

@@ -12,8 +12,8 @@ export const MarketingFAQ = () => (
         </h2>
       </div>
       <p className="watchable-body-copy max-w-[400px] pt-3 text-[1.02rem] lg:justify-self-end">
-        Visible answers for people, search engines, and answer engines. The same FAQ content is what
-        powers the homepage FAQ JSON-LD.
+        These visible answers are also the source for the homepage FAQ JSON-LD, so the structured
+        data stays aligned with what the page actually says.
       </p>
     </div>
 

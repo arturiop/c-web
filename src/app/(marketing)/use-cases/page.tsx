@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { useCases } from '@/data/useCases';
 import { getBreadcrumbsForPath, getRequiredRouteById } from '@/lib/routes';
@@ -25,23 +24,22 @@ export default function UseCasesPage() {
           Use cases for teams that need stronger creative systems
         </h1>
         <p className="max-w-3xl text-lg text-[var(--color-watchable-muted)]">
-          Watchable helps teams turn product context into creative direction that is easier to
-          review, refine, and launch.
+          Watchable helps CPG and ecommerce growth teams turn product context into creative
+          direction that is easier to review, refine, and launch across paid-social workflows.
         </p>
       </section>
 
       <div className="grid gap-4 lg:grid-cols-3">
         {useCases.map((useCase) => (
-          <Link
+          <article
             key={useCase.slug}
-            href={`/use-cases/${useCase.slug}`}
-            className="rounded-[1.5rem] border border-[var(--color-watchable-line)] bg-white p-6 transition hover:-translate-y-0.5 hover:border-[var(--color-watchable-accent)]"
+            className="rounded-[1.5rem] border border-[var(--color-watchable-line)] bg-white p-6"
           >
             <h2 className="text-xl font-semibold text-[var(--color-watchable-ink)]">
               {useCase.title}
             </h2>
             <p className="mt-2 text-base text-[var(--color-watchable-muted)]">{useCase.summary}</p>
-          </Link>
+          </article>
         ))}
       </div>
     </div>

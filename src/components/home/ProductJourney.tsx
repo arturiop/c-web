@@ -1,6 +1,6 @@
-import { scriptRows } from '@/content/home';
+import Image from 'next/image';
+import { scriptRows, workflowSteps } from '@/content/home';
 import { AppConfig } from '@/utils/AppConfig';
-import { ProductJourneyClient } from './ProductJourneyClient';
 
 export const ProductJourney = () => (
   <section id="product" className="space-y-12">
@@ -84,11 +84,50 @@ export const ProductJourney = () => (
           href={AppConfig.signupUrl}
           className="mt-5 inline-flex w-full items-center justify-center rounded-[18px] bg-black px-5 py-4 text-[1.05rem] font-semibold text-white transition hover:bg-[#1a1a1a]"
         >
-          Start in the app
+          Start in Watchable
         </a>
       </article>
 
-      <ProductJourneyClient />
+      <div className="grid gap-5">
+        {workflowSteps.map((step) => (
+          <article
+            key={step.id}
+            className="watchable-panel overflow-hidden rounded-[30px] border border-[var(--color-watchable-line)]"
+          >
+            <div className="grid gap-6 p-6 sm:p-7">
+              <div className="flex items-start justify-between gap-4">
+                <div className="space-y-3">
+                  <p className="text-[12px] font-semibold tracking-[0.24em] text-[var(--color-watchable-accent)] uppercase">
+                    Step {step.step}
+                  </p>
+                  <h3 className="text-[1.8rem] leading-tight font-semibold tracking-[-0.04em] text-[var(--color-watchable-ink)]">
+                    {step.label}
+                  </h3>
+                </div>
+                <span className="watchable-tag rounded-full px-4 py-2 text-[14px] text-[var(--color-watchable-muted)]">
+                  {step.sublabel}
+                </span>
+              </div>
+
+              <p className="max-w-[58ch] text-[1rem] leading-8 text-[var(--color-watchable-muted)]">
+                {step.body}
+              </p>
+            </div>
+
+            <div className="border-t border-[var(--color-watchable-line)] bg-white/65 p-5">
+              <div className="overflow-hidden rounded-[24px] border border-[var(--color-watchable-line)] bg-white">
+                <Image
+                  src={step.imageSrc}
+                  alt={step.imageAlt}
+                  width={1600}
+                  height={1200}
+                  className="h-[280px] w-full object-cover object-left-top sm:h-[340px]"
+                />
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
     </div>
   </section>
 );

@@ -12,7 +12,7 @@ export const MarketplaceProof = () => (
       </div>
       <p className="watchable-body-copy max-w-[410px] pt-6 text-[1.02rem] lg:justify-self-end">
         A direct view of how Watchable moves from source material to reviewable creative direction
-        for ecommerce teams and marketplace operators.
+        for ecommerce teams, marketplace operators, and brands running high-volume creative tests.
       </p>
     </div>
 

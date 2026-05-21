@@ -1,13 +1,14 @@
 export const homeMetadata = {
-  title: 'Watchable',
+  title: 'AI Creative Operating System for Ecommerce Growth Teams',
   description:
     'Watchable is an AI Creative Operating System for ecommerce growth teams turning product and brand context into creative angles, hooks, scripts, storyboards, assets, variants, and performance learnings.',
 } as const;
 
 export const homeHero = {
   eyebrow: 'AI Creative Operating System',
-  body: 'Watchable helps ecommerce growth teams generate scripts, assets, variants, and reviewable creative direction faster without relying on a fragmented UGC workflow.',
-  primaryCta: 'Start in the app',
+  title: 'Turn product and brand context into creative direction your team can actually test',
+  body: 'Watchable helps ecommerce growth teams turn product pages, brand nuance, and testing goals into creative angles, hooks, scripts, storyboards, assets, and variants faster.',
+  primaryCta: 'Start in Watchable',
   secondaryCta: 'Request demo',
   points: [
     'Built for ecommerce growth teams',
@@ -18,41 +19,47 @@ export const homeHero = {
 
 export const marketPainCards = [
   {
-    title: 'Generic AI video tools skip the operating layer',
-    body: 'Teams still need to translate product truth, brand nuance, channel context, and testing goals into a creative system humans can review.',
+    title: 'Paid acquisition stalls when creative quality and testing speed fall behind',
+    body: 'Most teams do not struggle to generate more ideas. They struggle to turn product truth, audience insight, and channel context into a testing pipeline they can run every week.',
   },
   {
     title: 'Agencies and freelancers are too slow for iterative testing',
-    body: 'When every new angle needs a fresh brief and handoff, testing velocity collapses before the market learns anything useful.',
+    body: 'When every new angle needs a fresh brief, handoff, and review cycle, the team learns too slowly to keep paid social and marketplace creative fresh.',
   },
   {
-    title: 'Inconsistent UGC workflows lose context',
-    body: 'Product pages, creative ideas, brand rules, assets, and learnings drift apart across tools, docs, and chats.',
+    title: 'Generic AI video tools and ad hoc UGC workflows lose context',
+    body: 'Product pages, brand rules, asset references, creator direction, and performance learnings drift apart across chats, docs, and one-off prompts.',
   },
 ] as const;
 
-export const productJourneyStages = [
+export const workflowSteps = [
   {
     id: 'product',
-    label: 'Your Product',
-    sublabel: 'Drop a photo or link',
-    prompt: 'Build creative angles for this product page with a stronger paid social hook',
+    step: '01',
+    label: 'Feed in product and brand context',
+    sublabel: 'Source page, product assets, claims, audience, offer, brand voice',
+    body: 'Start from the inputs the team already has: product pages, listing context, brand rules, references, creative goals, and testing priorities.',
     imageSrc: '/assets/st.webp',
-    imageAlt: 'Example product input card showing a tumbler used as source material',
+    imageAlt:
+      'Example product input card showing source material used to brief creative generation',
   },
   {
     id: 'storyboard',
-    label: 'AI Storyboard',
-    sublabel: 'Refine the script and scenes',
+    step: '02',
+    label: 'Shape angles, hooks, scripts, and storyboards',
+    sublabel: 'Reviewable creative direction before production',
+    body: 'Watchable turns raw context into structured concepts the team can compare, refine, and align on before spending cycles on motion, editing, or outside production.',
     imageSrc: '/assets/s_s.webp',
     imageAlt: 'Storyboard workspace showing generated scenes and creative planning',
   },
   {
-    id: 'video',
-    label: 'Ready to Test',
-    sublabel: 'Move into launch-ready creative',
-    videoSrc: '/assets/demo_s.mp4',
-    videoLabel: 'Watchable short-form creative preview',
+    id: 'variants',
+    step: '03',
+    label: 'Move stronger concepts into assets, variants, and launch-ready testing',
+    sublabel: 'Creative outputs built to iterate',
+    body: 'Carry the best ideas forward into assets and variants without losing the reasoning behind the hook, script, scene order, or audience angle.',
+    imageSrc: '/assets/m.webp',
+    imageAlt: 'Watchable creative workspace showing generated scenes and launch-ready outputs',
   },
 ] as const;
 
@@ -102,15 +109,15 @@ export const marketplaceStages = [
 export const credibilityBlocks = [
   {
     title: 'What problem it solves',
-    body: 'Watchable gives ecommerce teams a repeatable way to turn product and brand context into creative work that can actually be reviewed and tested.',
+    body: 'Watchable gives ecommerce teams a repeatable way to turn product and brand context into creative work that can actually be reviewed, debated, and tested.',
   },
   {
     title: 'Who it is for',
-    body: 'Built for growth teams, beauty and skincare brands, Amazon sellers, performance marketers, brand teams, and creative strategists.',
+    body: 'Built for growth teams, beauty and skincare brands, Amazon sellers, performance marketers, brand teams, creative strategists, and founders who need faster concept testing.',
   },
   {
     title: 'Why it is different',
-    body: 'It focuses on the creative testing pipeline, not just one-step video generation. The product helps teams structure inputs, outputs, and learnings across the workflow.',
+    body: 'It focuses on the creative testing pipeline, not just one-step video generation. The product helps teams structure inputs, outputs, and learnings across the workflow instead of relying on random prompt churn.',
   },
 ] as const;
 
@@ -128,7 +135,7 @@ export const faqItems = [
   {
     question: 'What does the team get out of it?',
     answer:
-      'Teams get reviewable creative direction, clearer hooks and scripts, structured storyboard outputs, and a more consistent path from product context to testable ads.',
+      'Teams get creative angles, hooks, scripts, storyboards, assets, variants, and a more consistent path from product context to testable ads.',
   },
   {
     question: 'Is this just an AI video generator?',

@@ -9,7 +9,7 @@ export const HomeCTA = () => (
           Next step
         </p>
         <h2 className="text-[3rem] leading-[1.02] font-semibold tracking-[-0.06em] text-[var(--color-watchable-ink)]">
-          If your team wants a stronger creative testing system, start here.
+          If your team needs a faster creative testing pipeline, start here.
         </h2>
         <p className="mt-4 text-[1.02rem] leading-8 text-[var(--color-watchable-muted)]">
           Explore the product directly in the app, or book a demo if you want to map Watchable to
@@ -22,7 +22,7 @@ export const HomeCTA = () => (
           href={AppConfig.signupUrl}
           className="inline-flex items-center justify-center rounded-full bg-[var(--color-watchable-ink)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-black"
         >
-          Start in the app
+          Start in Watchable
         </a>
         <a
           href={AppConfig.loginUrl}

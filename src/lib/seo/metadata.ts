@@ -6,6 +6,10 @@ type PageMetadataInput = {
   description: string;
   path: string;
   noIndex?: boolean;
+  openGraphType?: 'website' | 'article';
+  imagePath?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
 };
 
 export const baseMetadata: Metadata = {
@@ -60,6 +64,7 @@ export const baseMetadata: Metadata = {
 
 export const createPageMetadata = (input: PageMetadataInput): Metadata => {
   const canonicalUrl = getCanonicalUrl(input.path);
+  const imageUrl = input.imagePath ?? siteConfig.defaultOgImage;
 
   return {
     title: input.title,
@@ -72,18 +77,20 @@ export const createPageMetadata = (input: PageMetadataInput): Metadata => {
       description: input.description,
       url: canonicalUrl,
       siteName: siteConfig.name,
-      type: 'website',
+      type: input.openGraphType ?? 'website',
       images: [
         {
-          url: siteConfig.defaultOgImage,
+          url: imageUrl,
         },
       ],
+      ...(input.publishedTime ? { publishedTime: input.publishedTime } : {}),
+      ...(input.modifiedTime ? { modifiedTime: input.modifiedTime } : {}),
     },
     twitter: {
       card: 'summary_large_image',
       title: input.title,
       description: input.description,
-      images: [siteConfig.defaultOgImage],
+      images: [imageUrl],
     },
     robots: input.noIndex ? { index: false, follow: false } : undefined,
   };

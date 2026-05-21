@@ -10,14 +10,14 @@ The product application lives separately at `app.watchable-ai.com`. Backend APIs
 
 - Landing pages
 - Use-case pages
+- Blog and content pages
 - Pricing and demo-request pages
 - Legal pages
 - SEO metadata
 - OpenGraph and social previews
 - JSON-LD
 - Sitemap and robots
-- i18n and localized public pages
-- Blog and content foundation later
+- English-only public content
 
 ## Out of scope
 
@@ -33,7 +33,9 @@ The product application lives separately at `app.watchable-ai.com`. Backend APIs
 - `/` public landing page
 - `/pricing` public pricing page
 - `/use-cases` public use-case index
-- `/use-cases/[slug]` public use-case detail pages
+- `/blog` public blog index
+- `/blog/[slug]` public blog article pages
+- `/how-it-works`, `/for-cpg-brands`, `/examples` public content pages
 - `/about` company/about page
 - `/demo-request` public demo-request page
 - `/privacy`, `/terms`, `/cookies` public legal pages
@@ -83,13 +85,6 @@ npm run test:e2e
 npm run build-storybook
 ```
 
-## i18n
-
-- Locale routing is handled with `next-intl`.
-- Localized marketing copy lives in `src/locales`.
-- English is the source locale.
-- `crowdin.yml` is optional workflow configuration and does not affect runtime behavior.
-
 ## Environment
 
 Common variables:
@@ -122,7 +117,3 @@ Local development should not require auth-provider, database, or product-app sec
 
 - Public marketing CTAs should point to the configured product app URL where account access or product usage begins.
 - Do not add fake internal sign-in or sign-up routes to this site.
-
-## Notices
-
-Third-party attribution for the original MIT-licensed template base is preserved in `THIRD_PARTY_NOTICES.md`.

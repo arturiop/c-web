@@ -8,7 +8,7 @@ export const CompanyCredibility = () => (
           Why Watchable
         </p>
         <h2 className="max-w-[10ch] text-[3.4rem] leading-[1.04] font-semibold tracking-[-0.065em] text-[var(--color-watchable-ink)]">
-          A serious workflow for creative teams that test often.
+          A serious workflow for ecommerce teams that test often.
         </h2>
       </div>
 

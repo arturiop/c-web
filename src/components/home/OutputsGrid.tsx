@@ -12,9 +12,9 @@ export const OutputsGrid = () => (
         </h2>
       </div>
       <p className="watchable-body-copy max-w-[38ch] pt-2 text-[1.02rem]">
-        Watchable is designed to produce marketing outputs that help teams make clearer decisions,
-        not just generate more raw media. The homepage stays aligned with the deeper product
-        direction: understand the brand, then create or check creative work against that context.
+        Watchable is designed to produce outputs that help teams make clearer creative decisions,
+        not just generate more raw media. The value is the structure around testing, iteration, and
+        shared review.
       </p>
     </div>
 

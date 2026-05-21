@@ -24,11 +24,16 @@ export const HomeHero = () => (
             {homeHero.eyebrow}
           </p>
           <h1 className="max-w-[12ch] text-[3.5rem] leading-[0.95] font-semibold tracking-[-0.07em] text-[var(--color-watchable-ink)] sm:text-[5rem]">
-            Turn product and brand context into{' '}
-            <span className="rounded-[18px] bg-[#ffefe5] px-3 py-1 text-[var(--color-watchable-accent)]">
-              creative direction
-            </span>{' '}
-            your team can actually test
+            {homeHero.title.split('creative direction').map((part, index, parts) => (
+              <span key={part}>
+                {part}
+                {index < parts.length - 1 ? (
+                  <span className="rounded-[18px] bg-[#ffefe5] px-3 py-1 text-[var(--color-watchable-accent)]">
+                    creative direction
+                  </span>
+                ) : null}
+              </span>
+            ))}
             <span className="text-[var(--color-watchable-accent)]">.</span>
           </h1>
         </div>
