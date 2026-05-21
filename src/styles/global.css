@@ -1,0 +1,55 @@
+@layer theme, base, components, utilities;
+
+@import 'tailwindcss';
+
+@theme {
+  --color-watchable-ink: #101114;
+  --color-watchable-muted: #727383;
+  --color-watchable-line: #e9e2d8;
+  --color-watchable-sand: #fcf8f3;
+  --color-watchable-card: rgba(255, 255, 255, 0.82);
+  --color-watchable-accent: #ff7a1a;
+  --shadow-watchable-soft: 0 22px 60px rgba(161, 132, 98, 0.14);
+  --shadow-watchable-glow:
+    0 0 0 1px rgba(255, 255, 255, 0.45), 0 26px 80px rgba(186, 155, 114, 0.18);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top center, rgba(255, 245, 236, 0.95), transparent 42%),
+    linear-gradient(180deg, #fffcf8 0%, #fbf7f2 100%);
+  color: var(--color-watchable-ink);
+  font-feature-settings: 'ss01' on;
+}
+
+::selection {
+  background: rgba(255, 122, 26, 0.16);
+}
+
+.watchable-panel {
+  border: 1px solid var(--color-watchable-line);
+  background: var(--color-watchable-card);
+  box-shadow: var(--shadow-watchable-soft);
+  backdrop-filter: blur(18px);
+}
+
+.watchable-tag {
+  border: 1px solid var(--color-watchable-line);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.watchable-section-title {
+  font-size: clamp(3.5rem, 7vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+}
+
+.watchable-body-copy {
+  color: var(--color-watchable-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}

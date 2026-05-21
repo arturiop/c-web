@@ -1,0 +1,156 @@
+{
+  "RootLayout": {
+    "home_link": "Home",
+    "pricing_link": "Pricing",
+    "use_cases_link": "Use cases",
+    "about_link": "About",
+    "demo_request_link": "Demo request",
+    "cookies_link": "Cookie notice",
+    "sign_in_link": "Log in",
+    "sign_up_link": "Start in the app"
+  },
+  "MarketingShell": {
+    "eyebrow": "Watchable",
+    "description": "AI Creative Operating System for ecommerce growth teams.",
+    "cta_title": "See Watchable in action",
+    "cta_body": "Explore the product story here, then move into the app when your team is ready to work.",
+    "cta_link": "Start in the app",
+    "main_navigation_label": "Main navigation"
+  },
+  "Footer": {
+    "description": "Watchable helps ecommerce growth teams turn product and brand context into angles, storyboards, and ad-ready creative directions.",
+    "connect_title": "Connect",
+    "legal_title": "Legal",
+    "company_title": "Company",
+    "privacy_link": "Privacy Policy",
+    "terms_link": "Terms of Service",
+    "cookies_link": "Cookie Notice",
+    "company_copy": "© {year} Watchable. All rights reserved."
+  },
+  "AboutPage": {
+    "meta_title": "About Watchable",
+    "meta_description": "Learn how Watchable approaches creative operations for ecommerce growth teams.",
+    "eyebrow": "About",
+    "title": "Watchable helps growth teams make better creative decisions, faster",
+    "body": "We built Watchable to help ecommerce teams move from product and brand context to creative angles, storyboards, and ad-ready direction with more structure and less friction.",
+    "card_one_title": "Context first",
+    "card_one_body": "Start from product facts, audience nuance, and campaign intent before execution begins.",
+    "card_two_title": "Reviewable outputs",
+    "card_two_body": "Turn ideas into storyboards, concepts, and creative direction the team can align on quickly.",
+    "card_three_title": "Built for ecommerce velocity",
+    "card_three_body": "Support fast iteration across launches, paid social, marketplaces, and ongoing testing."
+  },
+  "PricingPage": {
+    "meta_title": "Pricing",
+    "meta_description": "Watchable pricing should match your team structure, creative workflow, and production needs.",
+    "eyebrow": "Pricing",
+    "title": "Pricing should reflect your creative workflow, team shape, and production needs",
+    "body": "Watchable pricing should align with how your team sources product context, collaborates on creative direction, and moves approved ideas into production.",
+    "card_one_title": "Built for team workflows",
+    "card_one_body": "Choose a setup that fits your review process, production volume, and stakeholder needs.",
+    "card_two_title": "Room for guided rollout",
+    "card_two_body": "Support product onboarding, creative operations setup, and rollout planning when needed.",
+    "card_three_title": "Clear buying path",
+    "card_three_body": "Move interested teams into the app or a demo conversation without friction.",
+    "cta_title": "Need a full product walkthrough?",
+    "cta_body": "Talk through your workflow, creative volume, and rollout needs with the Watchable team.",
+    "cta_link": "Start in the app"
+  },
+  "UseCasesPage": {
+    "meta_title": "Use cases",
+    "meta_description": "Watchable supports ecommerce growth teams, beauty and skincare brands, and Amazon sellers.",
+    "eyebrow": "Use cases",
+    "title": "Use cases for teams that need stronger creative systems",
+    "body": "Watchable helps teams turn product context into creative direction that is easier to review, refine, and launch.",
+    "items": {
+      "ecommerce_growth_teams": {
+        "title": "Ecommerce growth teams",
+        "body": "Translate product and campaign context into more consistent creative operations."
+      },
+      "beauty_skincare": {
+        "title": "Beauty and skincare",
+        "body": "Handle nuanced product positioning and high-volume creative iteration with more structure."
+      },
+      "amazon_sellers": {
+        "title": "Amazon sellers",
+        "body": "Move from listing inputs to sharper ad direction without a fragmented workflow."
+      }
+    }
+  },
+  "UseCaseDetailPage": {
+    "eyebrow": "Audience detail",
+    "items": {
+      "ecommerce_growth_teams": {
+        "meta_title": "Use case: Ecommerce growth teams",
+        "meta_description": "How Watchable helps ecommerce growth teams turn product context into creative operating leverage.",
+        "title": "Ecommerce growth teams",
+        "summary": "Growth teams need a repeatable way to move from product context and campaign goals into usable creative direction.",
+        "one_title": "Shared context",
+        "one_body": "Keep product facts, positioning, and creative intent aligned across the team.",
+        "two_title": "Faster iteration",
+        "two_body": "Reduce the lag between product inputs and reviewable creative decisions.",
+        "three_title": "Better operating rhythm",
+        "three_body": "Create a system that supports briefs, revisions, and consistent creative throughput."
+      },
+      "beauty_skincare": {
+        "meta_title": "Use case: Beauty and skincare",
+        "meta_description": "How Watchable helps beauty and skincare brands manage nuanced product storytelling and creative volume.",
+        "title": "Beauty and skincare",
+        "summary": "Beauty brands need creative systems that can handle nuance, visual consistency, and claim-sensitive messaging.",
+        "one_title": "Claim-aware messaging",
+        "one_body": "Support stronger creative ideas without drifting into careless product claims.",
+        "two_title": "Category nuance",
+        "two_body": "Reflect texture, routine, benefit framing, and audience sensitivity with more discipline.",
+        "three_title": "Creative scale",
+        "three_body": "Keep iteration moving without reducing the brand to generic creative."
+      },
+      "amazon_sellers": {
+        "meta_title": "Use case: Amazon sellers",
+        "meta_description": "How Watchable helps Amazon sellers turn listing inputs into ad-ready creative direction.",
+        "title": "Amazon sellers",
+        "summary": "Amazon sellers often have product information but not a clean system for turning it into stronger creative direction.",
+        "one_title": "Listing-first input",
+        "one_body": "Start from the product detail page and associated assets instead of rebuilding context manually.",
+        "two_title": "Ad-ready direction",
+        "two_body": "Turn marketplace inputs into clearer hooks, angles, and production priorities.",
+        "three_title": "Less fragmented workflow",
+        "three_body": "Keep sourcing, interpretation, and creative planning closer together."
+      }
+    }
+  },
+  "PrivacyPage": {
+    "meta_title": "Privacy",
+    "meta_description": "Privacy overview for the Watchable marketing site."
+  },
+  "TermsPage": {
+    "meta_title": "Terms",
+    "meta_description": "Terms overview for the Watchable marketing site."
+  },
+  "CookiesPage": {
+    "meta_title": "Cookie notice",
+    "meta_description": "Cookie notice for the Watchable marketing site.",
+    "title": "Cookie Notice"
+  },
+  "DemoRequestPage": {
+    "meta_title": "Demo request",
+    "meta_description": "Request a Watchable demo for your ecommerce growth team.",
+    "eyebrow": "Demo request",
+    "title": "Book a closer look at the Watchable workflow",
+    "body": "Use this route when your team wants to see how Watchable turns product context into creative direction and production-ready outputs.",
+    "card_one_title": "Map the workflow",
+    "card_one_body": "See how Watchable fits your creative planning, review, and launch process.",
+    "card_two_title": "Align stakeholders",
+    "card_two_body": "Give growth, brand, and creative leads a shared view of the product.",
+    "card_three_title": "Choose the next step",
+    "card_three_body": "Move into the app or continue with a guided rollout conversation.",
+    "cta_link": "Start in the app"
+  },
+  "LocaleSwitcher": {
+    "change_language": "Change language"
+  },
+  "NotFoundPage": {
+    "title": "404",
+    "body": "This page no longer exists, or it has been moved.",
+    "cta": "Return home"
+  }
+}

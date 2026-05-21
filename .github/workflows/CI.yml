@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  static:
+    name: Validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js environment
+        uses: ./.github/actions/setup-project
+        with:
+          node-version: 22.x
+
+      - name: Type check
+        run: npm run check:types
+        env:
+          NEXT_PUBLIC_SENTRY_DISABLED: 'true'
+          NEXT_PUBLIC_APP_URL: http://localhost:3008
+          NEXT_PUBLIC_APP_NAME: Watchable
+
+      - name: Lint
+        run: npm run lint
+        env:
+          NEXT_PUBLIC_SENTRY_DISABLED: 'true'
+          NEXT_PUBLIC_APP_URL: http://localhost:3008
+          NEXT_PUBLIC_APP_NAME: Watchable
+
+      - name: I18n check
+        run: npm run check:i18n
+
+      - name: Build
+        run: npm run build
+        env:
+          NEXT_PUBLIC_SENTRY_DISABLED: 'true'
+          NEXT_PUBLIC_APP_URL: http://localhost:3008
+          NEXT_PUBLIC_APP_NAME: Watchable
