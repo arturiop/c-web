@@ -3,6 +3,8 @@ import { primaryNavRoutes } from '@/lib/routes';
 import { MarketingShell } from '@/shells/MarketingShell';
 import { AppConfig } from '@/utils/AppConfig';
 
+export const dynamic = 'error';
+
 export default function MarketingLayout(props: { children: React.ReactNode }) {
   return (
     <MarketingShell

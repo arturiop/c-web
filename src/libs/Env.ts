@@ -2,9 +2,7 @@ import { createEnv } from '@t3-oss/env-nextjs';
 import * as z from 'zod';
 
 export const Env = createEnv({
-  server: {
-    ARCJET_KEY: z.string().startsWith('ajkey_').optional(),
-  },
+  server: {},
   client: {
     NEXT_PUBLIC_APP_URL: z.url().optional(),
     NEXT_PUBLIC_APP_NAME: z.string().min(1).default('Watchable'),
@@ -23,7 +21,6 @@ export const Env = createEnv({
   },
   // You need to destructure all the keys manually
   runtimeEnv: {
-    ARCJET_KEY: process.env.ARCJET_KEY,
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
     NEXT_PUBLIC_APP_NAME: process.env.NEXT_PUBLIC_APP_NAME,
     NEXT_PUBLIC_PRODUCT_APP_URL: process.env.NEXT_PUBLIC_PRODUCT_APP_URL,

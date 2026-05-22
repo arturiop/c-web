@@ -11,6 +11,9 @@ export function generateStaticParams() {
   return useCases.map((item) => ({ slug: item.slug }));
 }
 
+export const dynamic = 'error';
+export const dynamicParams = false;
+
 export async function generateMetadata(props: UseCaseDetailPageProps) {
   const { slug } = await props.params;
   const item = getUseCaseBySlug(slug);
