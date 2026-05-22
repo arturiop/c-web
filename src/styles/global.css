@@ -1,14 +1,15 @@
 @layer theme, base, components, utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400;1,9..40,500;1,9..40,700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 @import 'tailwindcss';
 
 @theme {
-  --color-watchable-ink: #101114;
-  --color-watchable-muted: #727383;
-  --color-watchable-line: #e9e2d8;
-  --color-watchable-sand: #fcf8f3;
+  --color-watchable-ink: hsl(240 10% 8%);
+  --color-watchable-muted: hsl(240 5% 45%);
+  --color-watchable-line: hsl(35 15% 88%);
+  --color-watchable-sand: hsl(40 20% 98%);
   --color-watchable-card: rgba(255, 255, 255, 0.82);
-  --color-watchable-accent: #ff7a1a;
+  --color-watchable-accent: hsl(25 95% 55%);
   --shadow-watchable-soft: 0 22px 60px rgba(161, 132, 98, 0.14);
   --shadow-watchable-glow:
     0 0 0 1px rgba(255, 255, 255, 0.45), 0 26px 80px rgba(186, 155, 114, 0.18);
@@ -18,12 +19,35 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --background-raw: 40 20% 98%;
+  --foreground-raw: 240 10% 8%;
+  --card-raw: 40 15% 96%;
+  --card-foreground-raw: 240 10% 8%;
+  --popover-raw: 40 20% 98%;
+  --popover-foreground-raw: 240 10% 8%;
+  --primary-raw: 240 10% 8%;
+  --primary-foreground-raw: 40 20% 98%;
+  --secondary-raw: 35 30% 92%;
+  --secondary-foreground-raw: 240 10% 8%;
+  --muted-raw: 35 15% 93%;
+  --muted-foreground-raw: 240 5% 45%;
+  --accent-raw: 25 95% 55%;
+  --accent-foreground-raw: 0 0% 100%;
+  --border-raw: 35 15% 88%;
+  --input-raw: 35 15% 88%;
+  --ring-raw: 25 95% 55%;
+  --font-dm-sans:
+    'DM Sans', 'Inter', 'SF Pro Display', 'Segoe UI', Arial, sans-serif;
+  --font-space-grotesk:
+    'Space Grotesk', 'Avenir Next Condensed', 'Arial Narrow', 'Inter', sans-serif;
+}
+
 body {
-  background:
-    radial-gradient(circle at top center, rgba(255, 245, 236, 0.95), transparent 42%),
-    linear-gradient(180deg, #fffcf8 0%, #fbf7f2 100%);
+  background: hsl(var(--background-raw));
   color: var(--color-watchable-ink);
   font-feature-settings: 'ss01' on;
+  font-family: var(--font-dm-sans), sans-serif;
 }
 
 ::selection {
@@ -46,10 +70,88 @@ body {
   font-size: clamp(3.5rem, 7vw, 5rem);
   line-height: 0.98;
   letter-spacing: -0.06em;
+  font-family: var(--font-space-grotesk), sans-serif;
 }
 
 .watchable-body-copy {
   color: var(--color-watchable-muted);
   font-size: 1rem;
   line-height: 1.6;
+}
+
+.landing-hero-shell,
+.landing-hero-shell *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6),
+.landing-hero-shell button,
+.landing-hero-shell input,
+.landing-hero-shell textarea,
+.landing-hero-shell select {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.landing-hero-shell h1,
+.landing-hero-shell h2,
+.landing-hero-shell h3,
+.landing-hero-shell h4,
+.landing-hero-shell h5,
+.landing-hero-shell h6 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.landing-hero-shell .text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.landing-hero-shell .text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.landing-hero-shell .text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.landing-hero-shell .text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.landing-hero-shell .text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.landing-hero-shell .text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.landing-hero-shell .text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.landing-hero-shell .text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+@media (min-width: 640px) {
+  .landing-hero-shell .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .landing-hero-shell .sm\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .landing-hero-shell .xl\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
 }

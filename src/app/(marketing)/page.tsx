@@ -20,7 +20,7 @@ export const metadata = createPageMetadata({
 
 export default function HomePage() {
   return (
-    <div className="space-y-24 pt-2 pb-8 sm:space-y-28 lg:space-y-32">
+    <div className="space-y-24 pb-8 sm:space-y-28 lg:space-y-32">
       <JsonLd data={buildFaqJsonLd(faqItems)} />
       <JsonLd
         data={buildSoftwareApplicationJsonLd({

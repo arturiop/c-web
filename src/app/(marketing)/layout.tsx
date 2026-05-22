@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { primaryNavRoutes } from '@/lib/routes';
 import { MarketingShell } from '@/shells/MarketingShell';
 import { AppConfig } from '@/utils/AppConfig';
 
@@ -10,34 +9,31 @@ export default function MarketingLayout(props: { children: React.ReactNode }) {
     <MarketingShell
       leftNav={
         <>
-          {primaryNavRoutes.map((route) => (
-            <li key={route.id}>
-              <Link
-                href={route.navHref ?? route.path}
-                className="transition hover:text-[var(--color-watchable-ink)]"
-              >
-                {route.navLabel ?? route.label}
-              </Link>
-            </li>
-          ))}
+          <li>
+            <Link href="/#product" className="hidden transition hover:text-[var(--color-watchable-ink)] md:block">
+              Product
+            </Link>
+          </li>
+          <li>
+            <Link href="/#about" className="hidden transition hover:text-[var(--color-watchable-ink)] md:block">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link href="/#contact" className="hidden transition hover:text-[var(--color-watchable-ink)] md:block">
+              Contact
+            </Link>
+          </li>
         </>
       }
       rightNav={
         <>
           <li>
             <a
-              href={AppConfig.loginUrl}
-              className="transition hover:text-[var(--color-watchable-ink)]"
-            >
-              Log in
-            </a>
-          </li>
-          <li>
-            <a
               href={AppConfig.signupUrl}
-              className="font-semibold text-[var(--color-watchable-ink)] transition hover:text-[var(--color-watchable-accent)]"
+              className="inline-flex items-center justify-center rounded-md bg-[var(--color-watchable-ink)] px-4 py-2 text-sm font-medium text-[hsl(40_20%_98%)] transition hover:bg-black"
             >
-              Start in the app
+              Get Started
             </a>
           </li>
         </>
