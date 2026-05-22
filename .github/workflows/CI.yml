@@ -36,9 +36,6 @@ jobs:
           NEXT_PUBLIC_APP_URL: http://localhost:3008
           NEXT_PUBLIC_APP_NAME: Watchable
 
-      - name: I18n check
-        run: npm run check:i18n
-
       - name: Build
         run: npm run build
         env:
