@@ -37,8 +37,7 @@ html {
   --border-raw: 35 15% 88%;
   --input-raw: 35 15% 88%;
   --ring-raw: 25 95% 55%;
-  --font-dm-sans:
-    'DM Sans', 'Inter', 'SF Pro Display', 'Segoe UI', Arial, sans-serif;
+  --font-dm-sans: 'DM Sans', 'Inter', 'SF Pro Display', 'Segoe UI', Arial, sans-serif;
   --font-space-grotesk:
     'Space Grotesk', 'Avenir Next Condensed', 'Arial Narrow', 'Inter', sans-serif;
 }

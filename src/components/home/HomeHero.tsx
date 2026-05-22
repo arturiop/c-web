@@ -6,9 +6,7 @@ export const HomeHero = () => (
           <p className="mb-6 text-[11px] font-semibold tracking-[0.25em] text-[var(--color-watchable-accent)] uppercase">
             AI-Powered Production
           </p>
-          <h1
-            className="mb-6 text-4xl leading-[1.08] font-bold tracking-tight text-[var(--color-watchable-ink)] sm:text-5xl"
-          >
+          <h1 className="mb-6 text-4xl leading-[1.08] font-bold tracking-tight text-[var(--color-watchable-ink)] sm:text-5xl">
             The easiest way to make{' '}
             <span className="inline-block rounded-lg bg-[color:rgb(255_122_26_/_0.15)] px-3 py-0.5 text-[var(--color-watchable-accent)]">
               video ads
@@ -20,9 +18,13 @@ export const HomeHero = () => (
           </h1>
           <p className="max-w-sm text-base leading-relaxed text-[var(--color-watchable-muted)] sm:text-lg">
             Upload your product · Project with AI · Choose your storyboard · Get polished UGC video
-            ads — <span className="font-medium text-[var(--color-watchable-ink)]">no production hassle</span>.
-            </p>
-          </div>
+            ads —{' '}
+            <span className="font-medium text-[var(--color-watchable-ink)]">
+              no production hassle
+            </span>
+            .
+          </p>
+        </div>
 
         <div className="relative">
           <div className="absolute -inset-4 rounded-3xl bg-[color:rgb(255_122_26_/_0.1)] blur-2xl" />
@@ -73,9 +75,7 @@ export const HomeHero = () => (
             <p className="mb-6 text-[11px] font-semibold tracking-[0.25em] text-[var(--color-watchable-accent)] uppercase">
               AI-Powered Production
             </p>
-            <h1
-              className="mb-8 text-5xl leading-[1.08] font-bold tracking-tight text-[var(--color-watchable-ink)] xl:text-6xl"
-            >
+            <h1 className="mb-8 text-5xl leading-[1.08] font-bold tracking-tight text-[var(--color-watchable-ink)] xl:text-6xl">
               The easiest way to make
               <br />
               <span className="mt-1 inline-block rounded-lg bg-[color:rgb(255_122_26_/_0.15)] px-3 py-0.5 text-[var(--color-watchable-accent)]">
@@ -90,7 +90,11 @@ export const HomeHero = () => (
             </h1>
             <p className="max-w-sm text-lg leading-relaxed text-[var(--color-watchable-muted)]">
               Upload your product · Clip with AI Choose your storyboard · Get polished UGC video ads
-              — <span className="font-medium text-[var(--color-watchable-ink)]">no production hassle</span>.
+              —{' '}
+              <span className="font-medium text-[var(--color-watchable-ink)]">
+                no production hassle
+              </span>
+              .
             </p>
           </div>
         </div>

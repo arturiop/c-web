@@ -10,17 +10,26 @@ export default function MarketingLayout(props: { children: React.ReactNode }) {
       leftNav={
         <>
           <li>
-            <Link href="/#product" className="hidden transition hover:text-[var(--color-watchable-ink)] md:block">
+            <Link
+              href="/#product"
+              className="hidden transition hover:text-[var(--color-watchable-ink)] md:block"
+            >
               Product
             </Link>
           </li>
           <li>
-            <Link href="/#about" className="hidden transition hover:text-[var(--color-watchable-ink)] md:block">
+            <Link
+              href="/#about"
+              className="hidden transition hover:text-[var(--color-watchable-ink)] md:block"
+            >
               About
             </Link>
           </li>
           <li>
-            <Link href="/#contact" className="hidden transition hover:text-[var(--color-watchable-ink)] md:block">
+            <Link
+              href="/#contact"
+              className="hidden transition hover:text-[var(--color-watchable-ink)] md:block"
+            >
               Contact
             </Link>
           </li>

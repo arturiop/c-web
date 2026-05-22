@@ -5,7 +5,7 @@ export const WatchableWordmark = (props: { clickable?: boolean; className?: stri
     <span
       className={
         props.className ??
-        'inline-flex items-baseline text-[25px] font-bold tracking-[-0.03em] leading-none sm:text-[32px]'
+        'inline-flex items-baseline text-[25px] leading-none font-bold tracking-[-0.03em] sm:text-[32px]'
       }
     >
       <span
@@ -32,9 +32,7 @@ export const WatchableWordmark = (props: { clickable?: boolean; className?: stri
       >
         able
       </span>
-      <span className="ml-[0.015em] text-[1.2em] leading-none text-[#ff6a1a]">
-        .
-      </span>
+      <span className="ml-[0.015em] text-[1.2em] leading-none text-[#ff6a1a]">.</span>
     </span>
   );
 
