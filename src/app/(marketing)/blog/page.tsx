@@ -44,10 +44,7 @@ export default function BlogIndexPage() {
 
       <section className="grid gap-10 sm:grid-cols-2 xl:grid-cols-3">
         {posts.map((post) => (
-          <article
-            key={post.slug}
-            className="group"
-          >
+          <article key={post.slug} className="group">
             <Link href={post.canonicalPath} className="block">
               <div className="overflow-hidden rounded-[1.6rem] bg-[var(--color-watchable-line)]">
                 <img
