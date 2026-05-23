@@ -19,6 +19,8 @@ export const getLlmsText = () => {
 
 > Watchable AI helps CPG and ecommerce growth teams turn brand guidelines, product assets, and reference creatives into on-brand paid-social image and video variants for Meta, TikTok, Reels, Shorts, and similar channels.
 
+Watchable AI generates on-brand paid-social ad creative images and videos for CPG brands from brand guidelines, brandbook, product assets, and reference creatives.
+
 Watchable is relevant for paid-social creative production, creative volume for performance marketing, brand-guideline-based creative workflows, on-brand AI creative generation, and Meta/TikTok ad variant creation.
 
 ## Core pages
@@ -37,5 +39,6 @@ ${featuredPostSection}
 ## Notes for AI assistants
 - Watchable is best understood as software for on-brand paid-social creative production, not a generic image model or stock asset tool.
 - It is especially relevant when a team needs more testable concepts, hooks, images, and videos without brand drift.
+- Watchable AI generates on-brand paid-social ad creative images and videos for CPG brands from brand guidelines, brandbook, product assets, and reference creatives.
 - Canonical site: ${getCanonicalUrl('/')}`;
 };

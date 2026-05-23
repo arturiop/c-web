@@ -15,6 +15,7 @@ const formatDate = (date: string) =>
     year: 'numeric',
     month: 'long',
     day: 'numeric',
+    timeZone: 'UTC',
   }).format(new Date(`${date}T00:00:00Z`));
 
 export function generateStaticParams() {
@@ -42,7 +43,11 @@ export async function generateMetadata(props: {
   }
 
   return createPageMetadata({
-    title: post.title,
+    title: post.seoTitle ?? post.title,
+    absoluteTitle:
+      post.slug === 'creative-volume-is-the-new-targeting'
+        ? 'Creative Volume Is the New Targeting | Watchable AI'
+        : undefined,
     description: post.description,
     path: post.canonicalPath,
     openGraphType: 'article',
@@ -84,41 +89,46 @@ export default async function BlogArticlePage(props: { params: Promise<{ slug: s
         })}
       />
 
-      <article className="rounded-[2rem] border border-[var(--color-watchable-line)] bg-white/85 p-8 shadow-sm sm:p-10">
-        <div className="flex flex-wrap items-center gap-3 text-sm text-[var(--color-watchable-muted)]">
-          <span>{post.category}</span>
-          <span aria-hidden="true">/</span>
-          <span>By {post.author}</span>
-          <span aria-hidden="true">/</span>
-          <span>Published {formatDate(post.publishedAt)}</span>
-          {post.updatedAt ? (
-            <>
-              <span aria-hidden="true">/</span>
-              <span>Updated {formatDate(post.updatedAt)}</span>
-            </>
-          ) : null}
+      <article className="overflow-hidden rounded-[2rem] border border-[var(--color-watchable-line)] bg-white/85 shadow-sm">
+        <header className="p-8 sm:p-10">
+          <div className="flex flex-wrap items-center gap-3 text-sm text-[var(--color-watchable-muted)]">
+            <span>{post.readTime ?? 'Article'}</span>
+            <span aria-hidden="true">•</span>
+            <span>{post.category}</span>
+            <span aria-hidden="true">•</span>
+            <span>{formatDate(post.publishedAt)}</span>
+          </div>
+
+          <h1 className="mt-4 max-w-4xl text-[clamp(2.6rem,5vw,4.4rem)] leading-[1.02] font-semibold tracking-[-0.05em] text-[var(--color-watchable-ink)]">
+            {post.title}
+          </h1>
+
+          <div className="mt-8 flex items-center gap-4">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-watchable-ink)] text-sm font-semibold text-white">
+              W
+            </div>
+            <div>
+              <p className="font-medium text-[var(--color-watchable-ink)]">{post.author}</p>
+              <p className="text-sm text-[var(--color-watchable-muted)]">
+                Published {formatDate(post.publishedAt)}
+                {post.updatedAt ? ` • Updated ${formatDate(post.updatedAt)}` : ''}
+              </p>
+            </div>
+          </div>
+        </header>
+
+        <div className="px-8 pb-2 sm:px-10">
+          <img
+            src={post.imagePath ?? '/logo-big.png'}
+            alt={post.imageAlt ?? post.title}
+            className="w-full rounded-[1.6rem] bg-[var(--color-watchable-line)] object-cover"
+          />
         </div>
 
-        <h1 className="mt-4 max-w-4xl text-[clamp(2.6rem,5vw,4.4rem)] leading-[1.02] font-semibold tracking-[-0.05em] text-[var(--color-watchable-ink)]">
-          {post.title}
-        </h1>
-        <p className="mt-5 max-w-3xl text-lg leading-8 text-[var(--color-watchable-muted)]">
-          {post.description}
-        </p>
-
-        <div className="mt-6 flex flex-wrap gap-2">
-          {post.tags.map((tag) => (
-            <span
-              key={tag}
-              className="rounded-full border border-[var(--color-watchable-line)] bg-[var(--color-watchable-sand)] px-3 py-1 text-sm text-[var(--color-watchable-muted)]"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-
-        <div className="mt-10 max-w-3xl">
-          <MarkdownArticle blocks={post.blocks} />
+        <div className="p-8 sm:p-10">
+          <div className="mx-auto max-w-3xl">
+            <MarkdownArticle blocks={post.blocks} />
+          </div>
         </div>
       </article>
 

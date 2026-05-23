@@ -237,7 +237,9 @@ Related reading once published: [How to scale on-brand paid-social creative with
 
 This is the problem Watchable is built around.
 
-Watchable helps CPG teams turn their existing brand inputs into on-brand paid-social creative at testing speed.
+Watchable is for CPG and ecommerce teams that need more on-brand paid-social creative volume without losing brand consistency.
+
+Watchable helps those teams turn their existing brand inputs into on-brand paid-social creative at testing speed.
 
 The workflow starts with the materials that already define the brand:
 
@@ -249,6 +251,8 @@ The workflow starts with the materials that already define the brand:
 - Tone-of-voice examples
 - Claims and compliance rules
 - Existing winning or approved ads
+
+If you want the workflow context first, see [how Watchable works](/how-it-works). If your team is specifically managing a consumer brand pipeline, see [Watchable for CPG brands](/for-cpg-brands).
 
 Watchable uses those inputs to generate paid-social images and video variants that stay closer to the brand’s actual visual system, product truth, and creative language.
 
@@ -282,4 +286,3 @@ It is about increasing the probability of finding the message, hook, proof, form
 That is why creative volume is the new targeting.
 
 And for CPG brands, it may be the difference between “paid social does not work for us” and “we finally found the creative system that scales.”
-

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { plannedBlogTopics } from '@/content/blog';
 import { getAllBlogPosts } from '@/lib/blog';
 import { getBreadcrumbsForPath, getRequiredRouteById } from '@/lib/routes';
 import { createPageMetadata } from '@/lib/seo/metadata';
@@ -17,41 +18,53 @@ const formatDate = (date: string) =>
     year: 'numeric',
     month: 'long',
     day: 'numeric',
+    timeZone: 'UTC',
   }).format(new Date(`${date}T00:00:00Z`));
 
 export default function BlogIndexPage() {
   const posts = getAllBlogPosts();
 
   return (
-    <div className="grid gap-6">
+    <div className="grid gap-8">
       <Breadcrumbs items={getBreadcrumbsForPath(route.path)} />
 
-      <section className="rounded-[2rem] border border-[var(--color-watchable-line)] bg-white/80 p-8 shadow-sm">
+      <section className="rounded-[2rem] border border-[var(--color-watchable-line)] bg-white/80 p-8 text-center shadow-sm sm:p-12">
         <p className="text-sm font-semibold tracking-[0.22em] text-[var(--color-watchable-accent)] uppercase">
           Blog
         </p>
-        <h1 className="mt-3 text-4xl font-semibold tracking-tight text-[var(--color-watchable-ink)]">
-          Practical writing on paid-social creative systems for CPG and ecommerce teams
+        <h1 className="mt-3 text-[clamp(2.8rem,6vw,5rem)] leading-[0.98] font-semibold tracking-[-0.05em] text-[var(--color-watchable-ink)]">
+          Practical writing on paid-social creative systems
         </h1>
-        <p className="max-w-3xl text-lg text-[var(--color-watchable-muted)]">
+        <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-[var(--color-watchable-muted)]">
           Watchable publishes direct, useful guidance on creative volume, brand consistency,
           paid-social production workflows, and how AI can help teams ship more testable creative
           without random off-brand output.
         </p>
       </section>
 
-      <section className="grid gap-4">
+      <section className="grid gap-10 sm:grid-cols-2 xl:grid-cols-3">
         {posts.map((post) => (
           <article
             key={post.slug}
-            className="rounded-[1.5rem] border border-[var(--color-watchable-line)] bg-white p-6 shadow-sm"
+            className="group"
           >
-            <div className="flex flex-wrap items-center gap-3 text-sm text-[var(--color-watchable-muted)]">
-              <span>{formatDate(post.publishedAt)}</span>
-              <span aria-hidden="true">/</span>
+            <Link href={post.canonicalPath} className="block">
+              <div className="overflow-hidden rounded-[1.6rem] bg-[var(--color-watchable-line)]">
+                <img
+                  src={post.imagePath ?? '/logo-big.png'}
+                  alt={post.imageAlt ?? post.title}
+                  className="aspect-[1/1] w-full object-cover transition duration-300 group-hover:scale-[1.02]"
+                />
+              </div>
+            </Link>
+
+            <div className="mt-5 flex flex-wrap items-center gap-3 text-sm text-[var(--color-watchable-muted)]">
               <span>{post.category}</span>
+              <span aria-hidden="true">•</span>
+              <span>{formatDate(post.publishedAt)}</span>
             </div>
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight text-[var(--color-watchable-ink)]">
+
+            <h2 className="mt-3 max-w-[14ch] text-[clamp(2rem,3vw,2.6rem)] leading-[1.04] font-medium tracking-[-0.05em] text-[var(--color-watchable-ink)]">
               <Link
                 href={post.canonicalPath}
                 className="transition hover:text-[var(--color-watchable-accent)]"
@@ -59,21 +72,37 @@ export default function BlogIndexPage() {
                 {post.title}
               </Link>
             </h2>
-            <p className="mt-3 max-w-3xl text-base leading-7 text-[var(--color-watchable-muted)]">
+            <p className="mt-3 max-w-md text-base leading-7 text-[var(--color-watchable-muted)]">
               {post.excerpt}
             </p>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {post.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full border border-[var(--color-watchable-line)] bg-[var(--color-watchable-sand)] px-3 py-1 text-sm text-[var(--color-watchable-muted)]"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
           </article>
         ))}
+      </section>
+
+      <section className="rounded-[2rem] border border-dashed border-[var(--color-watchable-line)] bg-white/75 p-8 shadow-sm">
+        <p className="text-sm font-semibold tracking-[0.22em] text-[var(--color-watchable-accent)] uppercase">
+          Content map
+        </p>
+        <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--color-watchable-ink)]">
+          Planned cluster topics
+        </h2>
+        <p className="mt-3 max-w-3xl text-base leading-7 text-[var(--color-watchable-muted)]">
+          These topics are queued for substantive articles. They are intentionally not published as
+          placeholder pages.
+        </p>
+        <ul className="mt-6 grid gap-3">
+          {plannedBlogTopics.map((topic) => (
+            <li
+              key={topic.slug}
+              className="rounded-[1.25rem] border border-[var(--color-watchable-line)] bg-[var(--color-watchable-sand)] p-4"
+            >
+              <p className="font-medium text-[var(--color-watchable-ink)]">{topic.title}</p>
+              <p className="mt-1 text-sm leading-6 text-[var(--color-watchable-muted)]">
+                {topic.angle}
+              </p>
+            </li>
+          ))}
+        </ul>
       </section>
     </div>
   );

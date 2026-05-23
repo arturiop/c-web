@@ -3,6 +3,7 @@ import { siteConfig, getCanonicalUrl } from './site';
 
 type PageMetadataInput = {
   title: string;
+  absoluteTitle?: string;
   description: string;
   path: string;
   noIndex?: boolean;
@@ -67,13 +68,13 @@ export const createPageMetadata = (input: PageMetadataInput): Metadata => {
   const imageUrl = input.imagePath ?? siteConfig.defaultOgImage;
 
   return {
-    title: input.title,
+    title: input.absoluteTitle ? { absolute: input.absoluteTitle } : input.title,
     description: input.description,
     alternates: {
       canonical: canonicalUrl,
     },
     openGraph: {
-      title: input.title,
+      title: input.absoluteTitle ?? input.title,
       description: input.description,
       url: canonicalUrl,
       siteName: siteConfig.name,
@@ -88,7 +89,7 @@ export const createPageMetadata = (input: PageMetadataInput): Metadata => {
     },
     twitter: {
       card: 'summary_large_image',
-      title: input.title,
+      title: input.absoluteTitle ?? input.title,
       description: input.description,
       images: [imageUrl],
     },

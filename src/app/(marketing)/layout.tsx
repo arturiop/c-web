@@ -27,6 +27,14 @@ export default function MarketingLayout(props: { children: React.ReactNode }) {
           </li>
           <li>
             <Link
+              href="/blog"
+              className="hidden transition hover:text-[var(--color-watchable-ink)] md:block"
+            >
+              Blog
+            </Link>
+          </li>
+          <li>
+            <Link
               href="/#contact"
               className="hidden transition hover:text-[var(--color-watchable-ink)] md:block"
             >
