@@ -9,7 +9,7 @@ export const homeHero = {
   title: 'Turn product and brand context into creative direction your team can actually test',
   body: 'Watchable helps ecommerce growth teams turn product pages, brand nuance, and testing goals into creative angles, hooks, scripts, storyboards, assets, and variants faster.',
   primaryCta: 'Start in Watchable',
-  secondaryCta: 'Request demo',
+  secondaryCta: 'Book a demo',
   points: [
     'Built for ecommerce growth teams',
     'Structured for repeatable creative testing',
@@ -145,6 +145,6 @@ export const faqItems = [
   {
     question: 'What should I do next if I am interested?',
     answer:
-      'Start in the app to explore the product directly, or request a demo if your team wants a closer walkthrough of the workflow.',
+      'Start in the app to explore the product directly, or book a demo if your team wants a closer walkthrough of the workflow.',
   },
 ] as const;

@@ -34,7 +34,7 @@ export const HomeCTA = () => (
           href="/demo-request"
           className="inline-flex items-center justify-center rounded-full border border-[var(--color-watchable-line)] bg-white/70 px-6 py-3 text-sm font-semibold text-[var(--color-watchable-ink)] transition hover:border-[var(--color-watchable-accent)] hover:text-[var(--color-watchable-accent)]"
         >
-          Request demo
+          Book a demo
         </Link>
       </div>
     </div>

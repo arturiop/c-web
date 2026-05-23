@@ -35,10 +35,10 @@ export default function MarketingLayout(props: { children: React.ReactNode }) {
           </li>
           <li>
             <Link
-              href="/#contact"
+              href="/demo-request"
               className="hidden transition hover:text-[var(--color-watchable-ink)] md:block"
             >
-              Contact
+              Book a demo
             </Link>
           </li>
         </>

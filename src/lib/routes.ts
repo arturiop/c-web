@@ -143,14 +143,14 @@ export const marketingRoutes: MarketingRoute[] = [
   {
     id: 'demoRequest',
     path: '/demo-request',
-    label: 'Request demo',
+    label: 'Book a demo',
     showInPrimaryNav: true,
     breadcrumbParentId: 'home',
     lastModified: '2026-05-22',
     metadata: {
-      title: 'Request a Demo',
+      title: 'Book a Demo',
       description:
-        'Request a Watchable demo to see how ecommerce teams move from product context to reviewable creative direction.',
+        'Book a Watchable demo to see how ecommerce teams move from product context to reviewable creative direction.',
     },
   },
   {

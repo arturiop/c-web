@@ -30,7 +30,7 @@ Watchable is relevant for paid-social creative production, creative volume for p
 - [Examples](${getCanonicalUrl(examplesRoute.path)}): The example types Watchable is built to support, without claiming customer work that is not published.
 - [Pricing](${getCanonicalUrl(pricingRoute.path)}): Buying path and rollout framing.
 - [About](${getCanonicalUrl(aboutRoute.path)}): Company and product positioning.
-- [Request demo](${getCanonicalUrl(demoRoute.path)}): Contact route for teams that want a walkthrough.
+- [Book a demo](${getCanonicalUrl(demoRoute.path)}): Demo-booking route for teams that want a walkthrough.
 
 ## Writing and resources
 - [Blog](${getCanonicalUrl(blogRoute.path)}): Writing on creative volume, paid-social production, brand consistency, and AI workflows.
