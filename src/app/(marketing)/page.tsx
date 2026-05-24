@@ -1,6 +1,7 @@
 import { CompanyCredibility } from '@/components/home/CompanyCredibility';
 import { HomeCTA } from '@/components/home/HomeCTA';
 import { HomeHero } from '@/components/home/HomeHero';
+import { HomeOperatingModel } from '@/components/home/HomeOperatingModel';
 import { MarketingFAQ } from '@/components/home/MarketingFAQ';
 import { MarketPain } from '@/components/home/MarketPain';
 import { MarketplaceProof } from '@/components/home/MarketplaceProof';
@@ -34,6 +35,7 @@ export default function HomePage() {
 
       <HomeHero />
       <MarketPain />
+      <HomeOperatingModel />
       <ProductJourney />
       <OutputsGrid />
       <MarketplaceProof />

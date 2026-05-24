@@ -5,32 +5,161 @@ export const homeMetadata = {
 } as const;
 
 export const homeHero = {
-  eyebrow: 'AI Creative Operating System',
-  title: 'Turn product and brand context into creative direction your team can actually test',
-  body: 'Watchable helps ecommerce growth teams turn product pages, brand nuance, and testing goals into creative angles, hooks, scripts, storyboards, assets, and variants faster.',
-  primaryCta: 'Start in Watchable',
-  secondaryCta: 'Book a demo',
-  points: [
-    'Built for ecommerce growth teams',
-    'Structured for repeatable creative testing',
-    'Grounded in product and brand context',
+  eyebrow: 'Creative Intelligence Workspace',
+  title: 'The creative operating layer for ecommerce growth.',
+  body: 'Turn product, brand, and customer context into the next angles, hooks, scripts, storyboards, and ad variants your team should test.',
+  primaryCta: 'Book a demo',
+  secondaryCta: 'Start in Watchable',
+  audienceLine: 'For beauty, skincare, wellness, supplements, and CPG growth teams.',
+  visualTitle: 'Creative test for Night Repair Serum',
+  visualSubtitle: 'Paid social concept pack for the next skincare launch cycle',
+  sourceItems: ['Product page', 'Customer reviews', 'Brand notes', 'Past ads'],
+  recommendationItems: [
+    'Angle: Routine proof',
+    'Hook: "I stopped guessing with my skincare"',
+    'Customer language: "visible results", "not sticky"',
+  ],
+  packItems: ['5 angles', '12 hooks', '3 scripts', '1 storyboard', '6 ad variants'],
+  contextCard: {
+    title: 'Input',
+    subtitle: 'Product page · Reviews · Brand notes · Past ads',
+  },
+  angleCard: {
+    title: 'Intelligence',
+    subtitle: 'Best angle: Routine proof',
+  },
+  hookCard: {
+    title: 'Pack',
+    subtitle: '5 angles · 12 hooks · 3 scripts',
+  },
+  packCard: {
+    title: 'Output',
+    subtitle: 'Premium preview ready',
+  },
+  claimChip: 'Claim check: needs proof',
+  flowLine: 'Context → Intelligence → Testing pack → Output',
+} as const;
+
+export const marketPainSection = {
+  eyebrow: 'WHY TEAMS LOOK FOR WATCHABLE',
+  title: 'Creative teams do not need more random AI assets.',
+  body: 'They need a repeatable way to move from product insight, customer language, brand rules, and past ads into creative directions worth testing.',
+  supporting:
+    'Watchable connects the missing layer between scattered context and testable creative output — so growth teams can decide what to test before they spend time or budget producing it.',
+  flowLabel: 'Context → Watchable → Testing pack',
+  columns: [
+    {
+      title: 'Context is scattered',
+      items: [
+        'Product pages',
+        'Customer reviews',
+        'Brand guidelines',
+        'Past ads',
+        'Campaign briefs',
+        'Performance notes',
+      ],
+      chips: ['Barrier Serum', '"Feels calming, not sticky."', 'Routine demo brief'],
+    },
+    {
+      title: 'Watchable structures it',
+      items: [
+        'Product truth',
+        'Customer language',
+        'Brand constraints',
+        'Creative opportunities',
+        'Claim risks',
+        'Channel fit',
+      ],
+      chips: ['Calm clinical tone', 'No cure claims', 'Routine proof angle'],
+    },
+    {
+      title: 'Teams get direction',
+      items: ['Angles', 'Hooks', 'Scripts', 'Storyboards', 'Ad variants', 'Testing rationale'],
+      chips: ['Hook bank', 'Storyboard', 'Testing rationale'],
+    },
   ],
 } as const;
 
-export const marketPainCards = [
-  {
-    title: 'Paid acquisition stalls when creative quality and testing speed fall behind',
-    body: 'Most teams do not struggle to generate more ideas. They struggle to turn product truth, audience insight, and channel context into a testing pipeline they can run every week.',
-  },
-  {
-    title: 'Agencies and freelancers are too slow for iterative testing',
-    body: 'When every new angle needs a fresh brief, handoff, and review cycle, the team learns too slowly to keep paid social and marketplace creative fresh.',
-  },
-  {
-    title: 'Generic AI video tools and ad hoc UGC workflows lose context',
-    body: 'Product pages, brand rules, asset references, creator direction, and performance learnings drift apart across chats, docs, and one-off prompts.',
-  },
-] as const;
+export const homeOperatingModel = {
+  eyebrow: 'OPERATING MODEL',
+  title: 'From scattered context to a creative decision system.',
+  body: 'Watchable reads the product, brand, customer language, and past creative signals — then turns them into angles, hooks, scripts, storyboards, and variants your team can actually test.',
+  flowLabel: 'Context → Intelligence → Direction → Output',
+  steps: [
+    {
+      step: '01',
+      label: 'Context',
+      title: 'Bring the context your team already has.',
+      items: [
+        'Product pages',
+        'Customer reviews',
+        'Brand guidelines',
+        'Past ads',
+        'Campaign briefs',
+        'Performance notes',
+      ],
+      description:
+        'Watchable starts from the material your team already uses to brief agencies, creators, and internal designers.',
+      chips: ['Barrier Serum', '"Feels calming, not sticky."', 'Texture close-up routine demo'],
+    },
+    {
+      step: '02',
+      label: 'Intelligence',
+      title: 'Turn it into creative intelligence.',
+      items: [
+        'Product truths',
+        'Audience pains',
+        'Customer language',
+        'Claim boundaries',
+        'Visual patterns',
+        'Channel fit',
+      ],
+      description:
+        'The system extracts what matters for creative decisions: proof points, objections, safe claims, tone, and formats worth testing.',
+      chips: [
+        'Lightweight daily barrier support',
+        'Calming, lightweight, under makeup',
+        'Avoid cure language',
+      ],
+    },
+    {
+      step: '03',
+      label: 'Direction',
+      title: 'Decide what should be tested.',
+      items: [
+        'Best angles',
+        'Hook directions',
+        'Story formats',
+        'Proof hierarchy',
+        'Risk notes',
+        'Creative rationale',
+      ],
+      description:
+        'Before generating assets, Watchable explains which directions are strongest and why they are worth testing.',
+      chips: [
+        'Angle: Routine proof',
+        'Hook: "I stopped skipping barrier care..."',
+        'Risk: avoid unsupported clinical claims',
+      ],
+    },
+    {
+      step: '04',
+      label: 'Output',
+      title: 'Build the testing pack.',
+      items: [
+        'Scripts',
+        'Storyboards',
+        'Static concepts',
+        'Video prompts',
+        'Ad variants',
+        'Testing plan',
+      ],
+      description:
+        'The result is not one random asset. It is a reviewable creative pack your team can refine, approve, produce, and learn from.',
+      chips: ['5 creative angles', '12 hooks', '1 storyboard'],
+    },
+  ],
+} as const;
 
 export const workflowSteps = [
   {
