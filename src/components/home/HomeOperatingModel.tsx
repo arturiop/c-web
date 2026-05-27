@@ -11,8 +11,6 @@ export const HomeOperatingModel = () => (
         {homeOperatingModel.body}
       </p>
     </div>
-
-    {/* TODO: Replace placeholder Barrier Serum inputs, hooks, and output chips with one real Watchable demo case. */}
     <div className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_36px_minmax(0,1fr)_36px_minmax(0,1fr)_36px_minmax(0,1fr)] xl:items-stretch">
       {homeOperatingModel.steps.map((step, index) => {
         const isHighlighted = step.label === 'Intelligence' || step.label === 'Direction';

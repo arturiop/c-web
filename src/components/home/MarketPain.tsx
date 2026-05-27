@@ -16,8 +16,6 @@ export const MarketPain = () => (
         {marketPainSection.supporting}
       </p>
     </div>
-
-    {/* TODO: Replace placeholder skincare/wellness example chips with real Watchable source and output samples. */}
     <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_44px_minmax(0,1fr)_44px_minmax(0,1fr)] lg:items-stretch">
       {marketPainSection.columns.map((column, index) => (
         <div key={column.title} className="contents">

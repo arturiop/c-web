@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { plannedBlogTopics } from '@/content/blog';
@@ -46,11 +47,13 @@ export default function BlogIndexPage() {
         {posts.map((post) => (
           <article key={post.slug} className="group">
             <Link href={post.canonicalPath} className="block">
-              <div className="overflow-hidden rounded-[1.6rem] bg-[var(--color-watchable-line)]">
-                <img
+              <div className="relative aspect-[1/1] overflow-hidden rounded-[1.6rem] bg-[var(--color-watchable-line)]">
+                <Image
                   src={post.imagePath ?? '/logo-big.png'}
                   alt={post.imageAlt ?? post.title}
-                  className="aspect-[1/1] w-full object-cover transition duration-300 group-hover:scale-[1.02]"
+                  fill
+                  sizes="(min-width: 1280px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover transition duration-300 group-hover:scale-[1.02]"
                 />
               </div>
             </Link>

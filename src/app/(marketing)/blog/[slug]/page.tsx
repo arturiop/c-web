@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { MarkdownArticle } from '@/components/blog/MarkdownArticle';
@@ -118,11 +119,15 @@ export default async function BlogArticlePage(props: { params: Promise<{ slug: s
         </header>
 
         <div className="px-8 pb-2 sm:px-10">
-          <img
-            src={post.imagePath ?? '/logo-big.png'}
-            alt={post.imageAlt ?? post.title}
-            className="w-full rounded-[1.6rem] bg-[var(--color-watchable-line)] object-cover"
-          />
+          <div className="relative aspect-[16/9] overflow-hidden rounded-[1.6rem] bg-[var(--color-watchable-line)]">
+            <Image
+              src={post.imagePath ?? '/logo-big.png'}
+              alt={post.imageAlt ?? post.title}
+              fill
+              sizes="(min-width: 1280px) 1120px, 100vw"
+              className="object-cover"
+            />
+          </div>
         </div>
 
         <div className="p-8 sm:p-10">
