@@ -14,6 +14,7 @@ export const buildOrganizationJsonLd = (props: {
   name: string;
   url: string;
   description: string;
+  logo?: string;
   sameAs?: string[];
 }): JsonLdValue => ({
   '@context': 'https://schema.org',
@@ -21,6 +22,7 @@ export const buildOrganizationJsonLd = (props: {
   name: props.name,
   url: props.url,
   description: props.description,
+  ...(props.logo ? { logo: { '@type': 'ImageObject', url: props.logo } } : {}),
   sameAs: props.sameAs,
 });
 
@@ -74,6 +76,20 @@ export const buildSoftwareApplicationJsonLd = (props: {
   description: props.description,
   applicationCategory: props.applicationCategory,
   operatingSystem: props.operatingSystem ?? 'Web',
+});
+
+export const buildWebPageJsonLd = (props: {
+  name: string;
+  url: string;
+  description: string;
+  isPartOf?: string;
+}): JsonLdValue => ({
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: props.name,
+  url: props.url,
+  description: props.description,
+  ...(props.isPartOf ? { isPartOf: { '@type': 'WebSite', url: props.isPartOf } } : {}),
 });
 
 export const buildArticleJsonLd = (props: {

@@ -1,162 +1,155 @@
 export const homeMetadata = {
-  title: 'AI Creative Operating System for Ecommerce Growth Teams',
+  title: 'On-Brand Paid-Social Creative for Marketers & Growth Teams',
   description:
-    'Watchable is an AI Creative Operating System for ecommerce growth teams turning product and brand context into creative angles, hooks, scripts, storyboards, assets, variants, and performance learnings.',
+    'Watchable lets marketers and growth teams make on-brand paid-social creative themselves — 100× cheaper and 1000× faster, always within your brandbook. No designers, no brand drift.',
 } as const;
 
 export const homeHero = {
-  eyebrow: 'Creative Intelligence Workspace',
-  title: 'The creative operating layer for ecommerce growth.',
-  body: 'Turn product, brand, and customer context into the next angles, hooks, scripts, storyboards, and ad variants your team should test.',
+  eyebrow: 'On-brand creative, no designers',
+  title: 'On-brand paid-social creative — 100× cheaper, 1000× faster.',
+  body: 'Watchable lets your marketing and growth team produce and test paid-social creative themselves — every concept, hook, image, and video locked to your brandbook. No designer in the loop, no brand drift.',
   primaryCta: 'Book a demo',
   secondaryCta: 'Start in Watchable',
-  audienceLine: 'For beauty, skincare, wellness, supplements, and CPG growth teams.',
-  visualTitle: 'Creative test for Night Repair Serum',
-  visualSubtitle: 'Paid social concept pack for the next skincare launch cycle',
-  sourceItems: ['Product page', 'Customer reviews', 'Brand notes', 'Past ads'],
+  audienceLine:
+    'Built for CPG and ecommerce growth teams — and startups where one person does it all.',
+  visualTitle: 'On-brand creative for your next launch',
+  visualSubtitle: 'Generated inside your brandbook — colors, claims, and tone locked',
+  sourceItems: ['Brandbook', 'Product assets', 'Approved claims', 'Past winning ads'],
   recommendationItems: [
-    'Angle: Routine proof',
-    'Hook: "I stopped guessing with my skincare"',
-    'Customer language: "visible results", "not sticky"',
+    'Within brand: colors, type, and logo',
+    'Claim check: only approved claims',
+    'Tone: on-brand, no drift',
   ],
-  packItems: ['5 angles', '12 hooks', '3 scripts', '1 storyboard', '6 ad variants'],
+  packItems: ['6 concepts', '12 hooks', '8 image variants', '4 video cuts', '1 handoff brief'],
   contextCard: {
     title: 'Input',
-    subtitle: 'Product page · Reviews · Brand notes · Past ads',
+    subtitle: 'Brandbook · Product assets · Claims · Past ads',
   },
   angleCard: {
-    title: 'Intelligence',
-    subtitle: 'Best angle: Routine proof',
+    title: 'On-brand',
+    subtitle: 'Locked to your guides',
   },
   hookCard: {
     title: 'Pack',
-    subtitle: '5 angles · 12 hooks · 3 scripts',
+    subtitle: 'Concepts · hooks · images · video',
   },
   packCard: {
     title: 'Output',
-    subtitle: 'Premium preview ready',
+    subtitle: 'On-brand variants, ready to test',
   },
-  claimChip: 'Claim check: needs proof',
-  flowLine: 'Context → Intelligence → Testing pack → Output',
+  claimChip: 'Claim check: only approved claims',
+  flowLine: 'Brandbook → On-brand variants → Test',
 } as const;
 
 export const marketPainSection = {
-  eyebrow: 'WHY TEAMS LOOK FOR WATCHABLE',
-  title: 'Creative teams do not need more random AI assets.',
-  body: 'They need a repeatable way to move from product insight, customer language, brand rules, and past ads into creative directions worth testing.',
+  eyebrow: 'WHY TEAMS USE WATCHABLE',
+  title: 'Creative should not wait on a designer.',
+  body: 'Every paid-social test needs more concepts, hooks, and variants than a design team can turn around — and faster than the launch calendar allows.',
   supporting:
-    'Watchable connects the missing layer between scattered context and testable creative output — so growth teams can decide what to test before they spend time or budget producing it.',
-  flowLabel: 'Context → Watchable → Testing pack',
+    'Watchable lets marketers make on-brand creative themselves — 100× cheaper and 1000× faster — without ever leaving the brandbook.',
+  flowLabel: 'Brandbook → Watchable → On-brand variants',
   columns: [
     {
-      title: 'Context is scattered',
+      title: 'The old way is slow and costly',
       items: [
-        'Product pages',
-        'Customer reviews',
-        'Brand guidelines',
-        'Past ads',
-        'Campaign briefs',
-        'Performance notes',
+        'Brief a designer',
+        'Wait days per asset',
+        'Pay per creative',
+        'Limited test volume',
+        'Endless revision loops',
+        'Bottlenecked launches',
       ],
-      chips: ['Barrier Serum', '"Feels calming, not sticky."', 'Routine demo brief'],
+      chips: ['Days per asset', '$$$ per creative', 'Few tests'],
     },
     {
-      title: 'Watchable structures it',
+      title: 'Watchable locks the brand',
       items: [
+        'Your brandbook',
+        'Approved claims',
+        'Logo and colors',
+        'Tone of voice',
         'Product truth',
-        'Customer language',
-        'Brand constraints',
-        'Creative opportunities',
-        'Claim risks',
-        'Channel fit',
+        'Channel formats',
       ],
-      chips: ['Calm clinical tone', 'No cure claims', 'Routine proof angle'],
+      chips: ['On-brand by default', 'No off-brand output', 'Claim-safe'],
     },
     {
-      title: 'Teams get direction',
-      items: ['Angles', 'Hooks', 'Scripts', 'Storyboards', 'Ad variants', 'Testing rationale'],
-      chips: ['Hook bank', 'Storyboard', 'Testing rationale'],
+      title: 'Marketers ship it themselves',
+      items: [
+        'Concepts',
+        'Hooks',
+        'Image variants',
+        'Video variants',
+        'Briefs for handoff',
+        'Test-ready packs',
+      ],
+      chips: ['100× cheaper', '1000× faster', 'No designer needed'],
     },
   ],
 } as const;
 
 export const homeOperatingModel = {
-  eyebrow: 'OPERATING MODEL',
-  title: 'From scattered context to a creative decision system.',
-  body: 'Watchable reads the product, brand, customer language, and past creative signals — then turns them into angles, hooks, scripts, storyboards, and variants your team can actually test.',
-  flowLabel: 'Context → Intelligence → Direction → Output',
+  eyebrow: 'HOW IT WORKS',
+  title: 'A deterministic system, not random AI.',
+  body: 'Watchable reads your brandbook and assets, then produces only on-brand creative — every output stays inside your colors, claims, tone, and product truth.',
+  flowLabel: 'Brandbook → Rules → On-brand creative → Test',
   steps: [
     {
       step: '01',
-      label: 'Context',
-      title: 'Bring the context your team already has.',
+      label: 'Brand',
+      title: 'Load your brandbook and guides.',
       items: [
-        'Product pages',
-        'Customer reviews',
         'Brand guidelines',
-        'Past ads',
-        'Campaign briefs',
-        'Performance notes',
+        'Brandbook',
+        'Logo and colors',
+        'Approved claims',
+        'Product assets',
+        'Past winning ads',
       ],
       description:
-        'Watchable starts from the material your team already uses to brief agencies, creators, and internal designers.',
-      chips: ['Barrier Serum', '"Feels calming, not sticky."', 'Texture close-up routine demo'],
+        'Watchable starts from the guides your brand already runs on — those rules become the system.',
+      chips: ['Colors and type', 'Approved claims', 'Product truth'],
     },
     {
       step: '02',
-      label: 'Intelligence',
-      title: 'Turn it into creative intelligence.',
+      label: 'Rules',
+      title: 'The brand becomes deterministic.',
       items: [
-        'Product truths',
-        'Audience pains',
-        'Customer language',
+        'Color and type rules',
         'Claim boundaries',
-        'Visual patterns',
-        'Channel fit',
+        'Tone of voice',
+        'Logo usage',
+        'Packaging accuracy',
+        'Channel formats',
       ],
       description:
-        'The system extracts what matters for creative decisions: proof points, objections, safe claims, tone, and formats worth testing.',
-      chips: [
-        'Lightweight daily barrier support',
-        'Calming, lightweight, under makeup',
-        'Avoid cure language',
-      ],
+        'Every generation is constrained by your guides, so output is on-brand by default — not a lucky prompt.',
+      chips: ['On-brand by default', 'No drift', 'Claim-safe'],
     },
     {
       step: '03',
-      label: 'Direction',
-      title: 'Decide what should be tested.',
-      items: [
-        'Best angles',
-        'Hook directions',
-        'Story formats',
-        'Proof hierarchy',
-        'Risk notes',
-        'Creative rationale',
-      ],
+      label: 'Make',
+      title: 'Marketers create and test themselves.',
+      items: ['Concepts', 'Hooks', 'Scripts', 'Image variants', 'Video variants', 'Test plan'],
       description:
-        'Before generating assets, Watchable explains which directions are strongest and why they are worth testing.',
-      chips: [
-        'Angle: Routine proof',
-        'Hook: "I stopped skipping barrier care..."',
-        'Risk: avoid unsupported clinical claims',
-      ],
+        'Your growth team edits and tests creative elements directly — no designer in the loop.',
+      chips: ['100× cheaper', '1000× faster', 'No designer'],
     },
     {
       step: '04',
-      label: 'Output',
-      title: 'Build the testing pack.',
+      label: 'Handoff',
+      title: 'Hand complex work to design.',
       items: [
-        'Scripts',
-        'Storyboards',
-        'Static concepts',
-        'Video prompts',
-        'Ad variants',
-        'Testing plan',
+        'Mockups',
+        'Creative briefs',
+        'Reference packs',
+        'Direction notes',
+        'Approved angles',
+        'Asset specs',
       ],
       description:
-        'The result is not one random asset. It is a reviewable creative pack your team can refine, approve, produce, and learn from.',
-      chips: ['5 creative angles', '12 hooks', '1 storyboard'],
+        'For brand-new or complex creative, Watchable produces clean mockups and briefs to hand to your design team.',
+      chips: ['Mockups', 'Briefs', 'Design-ready'],
     },
   ],
 } as const;
@@ -165,30 +158,31 @@ export const workflowSteps = [
   {
     id: 'product',
     step: '01',
-    label: 'Feed in product and brand context',
-    sublabel: 'Source page, product assets, claims, audience, offer, brand voice',
-    body: 'Start from the inputs the team already has: product pages, listing context, brand rules, references, creative goals, and testing priorities.',
+    label: 'Load your brandbook and product context',
+    sublabel: 'Guides, logo, colors, claims, product assets, past ads',
+    body: 'Start from the brand rules and assets your team already has. They become the constraints for everything Watchable makes.',
     imageSrc: '/assets/st.webp',
     imageAlt:
-      'Example product input card showing source material used to brief creative generation',
+      'Brand input card showing brandbook, claims, and product assets used to constrain creative generation',
   },
   {
     id: 'storyboard',
     step: '02',
-    label: 'Shape angles, hooks, scripts, and storyboards',
-    sublabel: 'Reviewable creative direction before production',
-    body: 'Watchable turns raw context into structured concepts the team can compare, refine, and align on before spending cycles on motion, editing, or outside production.',
+    label: 'Generate on-brand concepts, hooks, and variants',
+    sublabel: 'Everything stays inside your guides',
+    body: 'Marketers produce and edit concepts, hooks, images, and video themselves — always on-brand, ready to review and test.',
     imageSrc: '/assets/s_s.webp',
-    imageAlt: 'Storyboard workspace showing generated scenes and creative planning',
+    imageAlt: 'Workspace showing on-brand concepts and variants generated within the brand guides',
   },
   {
     id: 'variants',
     step: '03',
-    label: 'Move stronger concepts into assets, variants, and launch-ready testing',
-    sublabel: 'Creative outputs built to iterate',
-    body: 'Carry the best ideas forward into assets and variants without losing the reasoning behind the hook, script, scene order, or audience angle.',
+    label: 'Test, learn, and hand complex work to design',
+    sublabel: 'Briefs and mockups for your design team',
+    body: 'Test fast, keep the winners, and when something needs custom design, export a clean brief and mockup for the design team.',
     imageSrc: '/assets/m.webp',
-    imageAlt: 'Watchable creative workspace showing generated scenes and launch-ready outputs',
+    imageAlt:
+      'Watchable workspace showing on-brand outputs and an exportable brief for design handoff',
   },
 ] as const;
 
@@ -204,33 +198,33 @@ export const scriptRows = [
 ] as const;
 
 export const outputCategories = [
-  'Creative angles',
+  'On-brand concepts',
   'Hooks and scripts',
-  'Storyboards',
-  'Assets and variants',
-  'Performance learnings',
+  'Image variants',
+  'Video variants',
+  'Mockups and briefs for design',
 ] as const;
 
 export const marketplaceStages = [
   {
     eyebrow: 'Input',
-    title: 'Product page',
-    description: 'Start with an Amazon link, source page, or uploaded product assets.',
+    title: 'Your brand assets',
+    description: 'Start from your brandbook, product pages, or uploaded brand assets.',
     image: '/assets/mm.webp',
-    imageAlt: 'Watchable marketplace entry page for starting from a product listing link',
-    proof: 'Marketplace entry',
-    points: ['Listing source', 'Product-first brief'],
+    imageAlt: 'Watchable entry screen for starting from a brandbook and product assets',
+    proof: 'Brand inputs',
+    points: ['Brandbook and guides', 'Product assets'],
     imageHeight: 894,
   },
   {
     eyebrow: 'Output',
-    title: 'Creative workspace',
+    title: 'On-brand creative workspace',
     description:
-      'Review generated scenes, inspect frames, and move strong concepts toward motion or export.',
+      'Review on-brand concepts and variants, then move winners toward testing or export.',
     image: '/assets/m.webp',
-    imageAlt: 'Watchable creative workspace showing generated product-first scenes',
-    proof: 'Generated scenes',
-    points: ['Scene review', 'Motion-ready concepts'],
+    imageAlt: 'Watchable creative workspace showing on-brand, brand-locked variants',
+    proof: 'On-brand variants',
+    points: ['Brand-locked output', 'Test-ready'],
     imageHeight: 924,
   },
 ] as const;
@@ -238,15 +232,15 @@ export const marketplaceStages = [
 export const credibilityBlocks = [
   {
     title: 'What problem it solves',
-    body: 'Watchable gives ecommerce teams a repeatable way to turn product and brand context into creative work that can actually be reviewed, debated, and tested.',
+    body: 'Watchable lets marketers and growth teams make on-brand paid-social creative themselves — 100× cheaper and 1000× faster than briefing a designer for every test.',
   },
   {
     title: 'Who it is for',
-    body: 'Built for growth teams, beauty and skincare brands, Amazon sellers, performance marketers, brand teams, creative strategists, and founders who need faster concept testing.',
+    body: 'CPG and ecommerce growth teams, performance marketers, brand teams, and startups where one person runs everything — anyone who needs on-brand creative without a design bottleneck.',
   },
   {
     title: 'Why it is different',
-    body: 'It focuses on the creative testing pipeline, not just one-step video generation. The product helps teams structure inputs, outputs, and learnings across the workflow instead of relying on random prompt churn.',
+    body: 'Watchable is deterministic: every output is constrained by your brandbook, so creative stays on-brand by default. For complex new work, it produces mockups and briefs to hand to design.',
   },
 ] as const;
 
@@ -254,26 +248,26 @@ export const faqItems = [
   {
     question: 'What is Watchable?',
     answer:
-      'Watchable is an AI Creative Operating System for ecommerce growth teams. It turns product and brand context into creative angles, hooks, scripts, storyboards, assets, variants, and performance learnings.',
+      'Watchable lets marketers and growth teams produce on-brand paid-social creative themselves — concepts, hooks, images, and video — 100× cheaper and 1000× faster, always within your brandbook.',
   },
   {
     question: 'Who is Watchable for?',
     answer:
-      'It is designed for ecommerce growth teams, beauty and skincare brands, Amazon sellers, performance marketers, creative strategists, and brand teams managing repeated creative testing.',
+      'CPG and ecommerce growth teams, performance marketers, brand teams, and startups where one person does everything and needs on-brand creative without a design bottleneck.',
   },
   {
-    question: 'What does the team get out of it?',
+    question: 'How does Watchable keep creative on-brand?',
     answer:
-      'Teams get creative angles, hooks, scripts, storyboards, assets, variants, and a more consistent path from product context to testable ads.',
+      'It is deterministic: every output is constrained by your brand guidelines, brandbook, approved claims, and product assets, so creative is on-brand by default — not a random prompt result.',
   },
   {
-    question: 'Is this just an AI video generator?',
+    question: 'Do I need a designer to use it?',
     answer:
-      'No. Watchable is built around the operating layer before production, so teams can structure ideas, compare angles, and align on creative direction before launch.',
+      'No. Marketers and growth teams edit and test creative elements themselves. For complex or brand-new creative, Watchable produces clean mockups and briefs to hand to a design team.',
   },
   {
-    question: 'What should I do next if I am interested?',
+    question: 'How do I get started?',
     answer:
-      'Start in the app to explore the product directly, or book a demo if your team wants a closer walkthrough of the workflow.',
+      'Start in the app to explore the product directly, or book a demo to map Watchable to your brand and workflow.',
   },
 ] as const;

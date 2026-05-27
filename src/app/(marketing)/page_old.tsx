@@ -9,11 +9,7 @@ import { OutputsGrid } from '@/components/home/OutputsGrid';
 import { ProductJourney } from '@/components/home/ProductJourney';
 import { JsonLd } from '@/components/JsonLd';
 import { faqItems, homeMetadata } from '@/content/home';
-import {
-  buildFaqJsonLd,
-  buildSoftwareApplicationJsonLd,
-  buildWebPageJsonLd,
-} from '@/lib/seo/jsonLd';
+import { buildFaqJsonLd, buildSoftwareApplicationJsonLd } from '@/lib/seo/jsonLd';
 import { createPageMetadata } from '@/lib/seo/metadata';
 import { siteConfig } from '@/lib/seo/site';
 
@@ -26,14 +22,6 @@ export const metadata = createPageMetadata({
 export default function HomePage() {
   return (
     <div className="space-y-24 pb-8 sm:space-y-28 lg:space-y-32">
-      <JsonLd
-        data={buildWebPageJsonLd({
-          name: homeMetadata.title,
-          url: siteConfig.siteUrl,
-          description: homeMetadata.description,
-          isPartOf: siteConfig.siteUrl,
-        })}
-      />
       <JsonLd data={buildFaqJsonLd(faqItems)} />
       <JsonLd
         data={buildSoftwareApplicationJsonLd({

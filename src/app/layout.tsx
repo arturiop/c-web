@@ -21,6 +21,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
             name: siteConfig.name,
             url: siteConfig.siteUrl,
             description: siteConfig.defaultDescription,
+            logo: `${siteConfig.siteUrl}${siteConfig.defaultOgImage}`,
             sameAs: ['https://www.linkedin.com/company/watchable-ai'],
           })}
         />

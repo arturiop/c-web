@@ -6,9 +6,9 @@ export const MarketingShell = (props: {
   rightNav?: React.ReactNode;
   children: React.ReactNode;
 }) => (
-  <div className="landing-hero-shell w-full px-6 text-[var(--color-watchable-ink)] antialiased md:px-16">
-    <div className="mx-auto max-w-7xl">
-      <header className="flex items-center justify-between py-5">
+  <div className="landing-hero-shell w-full px-4 text-[var(--color-watchable-ink)] antialiased sm:px-6 lg:px-8 xl:px-10">
+    <div className="mx-auto max-w-[90rem]">
+      <header className="flex items-center justify-between py-5 sm:py-6">
         <div className="flex items-center gap-6">
           <WatchableWordmark />
         </div>
