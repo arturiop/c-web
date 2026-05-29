@@ -16,6 +16,7 @@ export const buildOrganizationJsonLd = (props: {
   description: string;
   logo?: string;
   sameAs?: string[];
+  email?: string;
 }): JsonLdValue => ({
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -23,6 +24,7 @@ export const buildOrganizationJsonLd = (props: {
   url: props.url,
   description: props.description,
   ...(props.logo ? { logo: { '@type': 'ImageObject', url: props.logo } } : {}),
+  ...(props.email ? { email: props.email } : {}),
   sameAs: props.sameAs,
 });
 
