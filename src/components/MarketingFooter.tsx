@@ -1,8 +1,10 @@
 import Link from 'next/link';
 import { WatchableWordmark } from '@/components/WatchableWordmark';
+import { canonicalProductDescription, companyProfile } from '@/content/company';
 import { AppConfig } from '@/utils/AppConfig';
 
 const productLinks = [
+  { label: 'Product', href: '/product' },
   { label: 'How it works', href: '/how-it-works' },
   { label: 'Examples', href: '/examples' },
   { label: 'Pricing', href: '/pricing' },
@@ -21,11 +23,13 @@ const resourceLinks = [
   { label: 'Creative testing', href: '/blog' },
   { label: 'Brand consistency', href: '/blog' },
   { label: 'AI workflows', href: '/blog' },
+  { label: 'Reviewer information', href: '/google-startups' },
 ] as const;
 
 const companyLinks = [
   { label: 'About', href: '/about' },
-  { label: 'Contact', href: 'mailto:hello@watchable-ai.com' },
+  { label: 'Book a demo', href: '/demo-request' },
+  { label: 'Contact', href: `mailto:${companyProfile.contactEmail}` },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/company/watchable-ai', external: true },
 ] as const;
 
@@ -84,14 +88,10 @@ export const MarketingFooter = () => {
             id="footer-heading"
             className="mt-5 text-[clamp(1.7rem,2.8vw,2.6rem)] leading-[1.02] font-semibold tracking-[-0.05em] text-[var(--color-watchable-ink)]"
           >
-            From one product to a full creative test.
+            Watchable AI
           </h2>
           <p className="mt-4 max-w-xl text-[15px] leading-7 text-[var(--color-watchable-muted)] sm:text-base">
-            Watchable helps ecommerce teams turn product context into angles, hooks, scripts,
-            storyboards, and ad variants.
-          </p>
-          <p className="mt-3 text-sm leading-6 text-[var(--color-watchable-muted)]">
-            More creative experiments. Less brand drift.
+            {canonicalProductDescription}
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <a
@@ -132,7 +132,9 @@ export const MarketingFooter = () => {
       </div>
 
       <div className="mt-12 flex flex-col gap-4 border-t border-[var(--color-watchable-line)] pt-6 text-sm text-[var(--color-watchable-muted)] md:flex-row md:items-center md:justify-between">
-        <p>© {currentYear} Watchable. All rights reserved.</p>
+        <p>
+          © {currentYear} {companyProfile.companyName}. All rights reserved.
+        </p>
         <nav aria-label="Legal" className="flex flex-wrap gap-x-5 gap-y-2">
           {legalLinks.map((link) => (
             <Link

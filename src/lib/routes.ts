@@ -1,5 +1,6 @@
 export type MarketingRouteId =
   | 'home'
+  | 'product'
   | 'about'
   | 'blog'
   | 'howItWorks'
@@ -34,14 +35,27 @@ export const marketingRoutes: MarketingRoute[] = [
     id: 'home',
     path: '/',
     label: 'Home',
-    navLabel: 'Product',
-    navHref: '/#product',
     showInPrimaryNav: true,
     lastModified: '2026-05-22',
     metadata: {
       title: 'Watchable',
       description:
-        'Watchable is an AI Creative Operating System for ecommerce growth teams turning product and brand context into hooks, scripts, storyboards, assets, and creative learnings.',
+        'Watchable is an AI creative operating system for ecommerce and CPG growth teams turning product and brand context into on-brand paid-social concepts, hooks, scripts, storyboards, image variants, video directions, and testing packs.',
+    },
+  },
+  {
+    id: 'product',
+    path: '/product',
+    label: 'Product',
+    showInPrimaryNav: true,
+    showInFooter: true,
+    footerSection: 'resources',
+    breadcrumbParentId: 'home',
+    lastModified: '2026-05-28',
+    metadata: {
+      title: 'Product',
+      description:
+        'See how Watchable turns product and brand context into creative angles, hooks, scripts, storyboards, image variants, video directions, and testing-ready packs.',
     },
   },
   {
@@ -119,12 +133,14 @@ export const marketingRoutes: MarketingRoute[] = [
     path: '/pricing',
     label: 'Pricing',
     showInPrimaryNav: true,
+    showInFooter: true,
+    footerSection: 'resources',
     breadcrumbParentId: 'home',
-    lastModified: '2026-05-22',
+    lastModified: '2026-05-28',
     metadata: {
       title: 'Pricing',
       description:
-        'Explore how Watchable pricing can align with your team structure, creative workflow, and rollout needs.',
+        'Watchable uses a subscription plus usage-based AI generation model for ecommerce and CPG teams that need a creative workflow, brand context system, and generation capacity.',
     },
   },
   {
@@ -133,11 +149,11 @@ export const marketingRoutes: MarketingRoute[] = [
     label: 'About',
     showInPrimaryNav: true,
     breadcrumbParentId: 'home',
-    lastModified: '2026-05-22',
+    lastModified: '2026-05-28',
     metadata: {
       title: 'About Watchable',
       description:
-        'Learn how Watchable helps ecommerce growth teams build better creative operating systems with product and brand context at the center.',
+        'Learn about Watchable AI, the team behind the product, and why the company is building an AI creative operating system for ecommerce and CPG growth teams.',
     },
   },
   {

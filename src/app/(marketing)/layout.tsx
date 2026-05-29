@@ -11,7 +11,7 @@ export default function MarketingLayout(props: { children: React.ReactNode }) {
         <>
           <li>
             <Link
-              href="/#product"
+              href="/product"
               className="hidden transition hover:text-[var(--color-watchable-ink)] md:block"
             >
               Product
@@ -19,10 +19,18 @@ export default function MarketingLayout(props: { children: React.ReactNode }) {
           </li>
           <li>
             <Link
-              href="/#about"
+              href="/about"
               className="hidden transition hover:text-[var(--color-watchable-ink)] md:block"
             >
               About
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/pricing"
+              className="hidden transition hover:text-[var(--color-watchable-ink)] md:block"
+            >
+              Pricing
             </Link>
           </li>
           <li>

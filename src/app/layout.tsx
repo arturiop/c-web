@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { JsonLd } from '@/components/JsonLd';
+import { companyProfile } from '@/content/company';
 import { buildOrganizationJsonLd, buildWebSiteJsonLd } from '@/lib/seo/jsonLd';
 import { baseMetadata } from '@/lib/seo/metadata';
 import { siteConfig } from '@/lib/seo/site';
@@ -22,6 +23,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
             url: siteConfig.siteUrl,
             description: siteConfig.defaultDescription,
             logo: `${siteConfig.siteUrl}${siteConfig.defaultOgImage}`,
+            email: companyProfile.contactEmail,
             sameAs: ['https://www.linkedin.com/company/watchable-ai'],
           })}
         />
